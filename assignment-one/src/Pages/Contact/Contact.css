@@ -1,0 +1,209 @@
+/* ============================================
+   Contact Section Styles
+   ============================================ */
+
+.contact-section {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    padding: 120px 0 60px;
+}
+
+/* Header Styles */
+.contact-header {
+    margin-bottom: 50px;
+}
+
+.typewriter-container {
+    font-size: 2.5rem;
+    color: rgba(255, 255, 255, 0.9);
+    min-height: 60px;
+}
+
+.contact-typewriter-text {
+    color: #e94560;
+    font-weight: 600;
+    display: inline;
+}
+
+.cursor {
+    color: #e94560;
+    font-weight: 300;
+    animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+
+    0%,
+    50% {
+        opacity: 1;
+    }
+
+    51%,
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Decorative Line */
+.decorative-line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.line {
+    width: 100px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #e94560, transparent);
+}
+
+.star {
+    font-size: 1.5rem;
+    animation: twinkle 1.5s ease-in-out infinite;
+}
+
+@keyframes twinkle {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.3);
+        opacity: 0.7;
+    }
+}
+
+/* Form Wrapper */
+.contact-form-wrapper {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+/* Success Message */
+.success-message {
+    background: linear-gradient(135deg, rgba(40, 167, 69, 0.2), rgba(40, 167, 69, 0.1));
+    border: 1px solid rgba(40, 167, 69, 0.4);
+    color: #28a745;
+    padding: 15px 25px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 1rem;
+    animation: slideDown 0.3s ease;
+}
+
+.success-icon {
+    font-size: 1.5rem;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Form Labels */
+.form-label {
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 500;
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+}
+
+/* Custom Inputs */
+.custom-input {
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 15px 20px;
+    color: #ffffff !important;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.custom-input::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.custom-input:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.08);
+    border-color: #e94560;
+    box-shadow: 0 0 20px rgba(233, 69, 96, 0.2);
+}
+
+.custom-textarea {
+    resize: none;
+    min-height: 150px;
+}
+
+/* Submit Button */
+.btn-submit {
+    background: linear-gradient(135deg, #e94560, #ff6b6b);
+    border: none;
+    border-radius: 50px;
+    padding: 15px 40px;
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(233, 69, 96, 0.4);
+}
+
+.btn-submit:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(233, 69, 96, 0.5);
+}
+
+.btn-submit:active {
+    transform: translateY(0);
+}
+
+.btn-icon {
+    display: flex;
+    transition: transform 0.3s ease;
+}
+
+.btn-submit:hover .btn-icon {
+    transform: translateX(5px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .typewriter-container {
+        font-size: 1.8rem;
+    }
+
+    .contact-form-wrapper {
+        padding: 25px;
+    }
+
+    .btn-submit {
+        width: 100%;
+        justify-content: center;
+    }
+}
